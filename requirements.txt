@@ -12,6 +12,7 @@ Jinja2==3.1.2
 MarkupSafe==2.1.1
 pipenv==2022.9.8
 platformdirs==2.5.2
+PyMySQL==1.0.2
 six==1.16.0
 SQLAlchemy==1.4.41
 virtualenv==20.16.5
