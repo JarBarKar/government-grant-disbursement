@@ -44,7 +44,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"household_id\": \"\",\r\n    \"name\": \"John\",\r\n    \"gender\": \"Male\",\r\n    \"marital_status\": \"married\",\r\n    \"spouse\": \"Mary\",\r\n    \"occupation_type\": \"employed\",\r\n    \"annual_income\": \"1000\",\r\n    \"dob\": \"11/11/1999\"\r\n}",
+					"raw": "{\r\n    \"household_id\": \"1\",\r\n    \"name\": \"John\",\r\n    \"gender\": \"Male\",\r\n    \"marital_status\": \"married\",\r\n    \"spouse\": \"Mary\",\r\n    \"occupation_type\": \"employed\",\r\n    \"annual_income\": \"1000\",\r\n    \"dob\": \"11/11/1999\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -74,7 +74,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:5000/household",
+					"raw": "http://127.0.0.1:5000/household/search",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -84,7 +84,8 @@
 					],
 					"port": "5000",
 					"path": [
-						"household"
+						"household",
+						"search"
 					]
 				}
 			},
@@ -124,7 +125,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:5000/household",
+					"raw": "http://127.0.0.1:5000/household/search?id=1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -134,7 +135,14 @@
 					],
 					"port": "5000",
 					"path": [
-						"household"
+						"household",
+						"search"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
 					]
 				}
 			},
