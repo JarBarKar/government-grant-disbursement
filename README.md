@@ -11,16 +11,16 @@ a family household needs and grant eligibility.
 
 To run this project, you will need to update the following environment variables to your .env file at root directory.
 
-`DB_ACCOUNT_ID` : <mySQL username>
+`DB_ACCOUNT_ID` : -mySQL username-
 
-`DB_ACCOUNT_PASSWORD` : <mySQL password>
+`DB_ACCOUNT_PASSWORD` : -mySQL password-
 
 ## Requirements
 
 **mySQL Database**
 
 Navigate to `./App` directory and copy the contents in `schema.sql`.
-Execute the SQL script in a XAMPP server of your choice to initiate the database tables and mock values.
+Execute the SQL script in a mySQL server (WAMP,MAMP,XAMPP,etc) of your choice to initiate the database tables and mock values.
 
 ## Run Locally
 
