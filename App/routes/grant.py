@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, Blueprint
 
 grant = Blueprint('grant', __name__)
 
-### Start of API point for retrieving eligible households for grant scheme ###
+### Start of API point for retrieving eligible family member for grant scheme ###
 
 
 @grant.route("/grant_schemes", methods=['GET'])
@@ -16,7 +16,6 @@ def grant_schemes():
             }
         ), 500
     try:
-        grantSchemesSelected = request.args.get('grant')
         if grantSchemesSelected == "student-encouragement-bonus":
             queries = db.engine.execute("SELECT * FROM MEMBER WHERE household_id in \
                                         (SELECT DISTINCT(household_id) as household_id from member \
@@ -95,8 +94,8 @@ def grant_schemes():
         return jsonify(
             {
                 "error": e,
-                "message": "Household retrieval failed."
+                "message": "Grant candidate retrieval failed."
             }
         ), 500
 
-### End of API point for retrieving eligible households for grant scheme ###
+### End of API point for retrieving eligible family member for grant scheme ###
