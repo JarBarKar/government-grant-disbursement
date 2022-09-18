@@ -37,7 +37,7 @@ def create_household():
         db.session.commit()
         return jsonify(
             {
-                "data": newHousehold,
+                "data": newHousehold.to_dict(),
                 "message": f"A {data['household_type']} house has been created in the system."
             }
         ), 200
