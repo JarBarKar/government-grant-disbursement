@@ -11,6 +11,11 @@ member = Blueprint('member', __name__)
 
 @member.route("/add_member", methods=['POST'])
 def create_member():
+    """Create a family member for a selected household
+
+    Returns:
+        message (string): success message
+    """
     expected = ["name", "gender", "marital_status", "spouse",
                 "occupation_type", "annual_income", "dob", "household_id"]
     validGenders = ["m", "f", "male", "female"]

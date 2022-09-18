@@ -5,6 +5,9 @@ from .extensions import db
 
 
 class Household(db.Model):
+    """
+    Household class
+    """
     __tablename__ = 'household'
 
     household_id = Column(Integer, primary_key=True, nullable=False)
@@ -29,6 +32,9 @@ class Household(db.Model):
 
 
 class Member(db.Model):
+    """
+    Member class
+    """
     __tablename__ = 'member'
     member_id = Column(Integer, primary_key=True, nullable=False)
     household_id = Column(Integer, ForeignKey(

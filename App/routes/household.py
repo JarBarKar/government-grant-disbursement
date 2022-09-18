@@ -10,6 +10,11 @@ household = Blueprint('household', __name__)
 
 @household.route("/household/add", methods=['POST'])
 def create_household():
+    """Create a household
+
+    Returns:
+        household_type (string): Type of household created
+    """
     expected = ["household_type"]
     validHouseholdType = ["Landed", "Condominium", "HDB"]
     data = request.get_json()
@@ -54,6 +59,12 @@ def create_household():
 ### Start of API point for all Households retrieval ###
 @household.route("/household/search", methods=['GET'])
 def get_all_households():
+    """Get all households and respective family members
+
+    Returns:
+        data (object): All the family members and their respective household
+        message (string): success message
+    """
     try:
         result = []
         queries = db.session.query(Household, Member).join(Member).all()
@@ -81,6 +92,12 @@ def get_all_households():
 ### Start of API point for searching specific Household ###
 @household.route("/household/search", methods=['GET'])
 def search_household():
+    """Search for specific household and return all family members in it.
+
+    Returns:
+        data (object): All the family members and their respective household
+        message (string): success message
+    """
     id = request.args.get('id')
     try:
         result = []

@@ -8,6 +8,12 @@ grant = Blueprint('grant', __name__)
 
 @grant.route("/grant_schemes", methods=['GET'])
 def grant_schemes():
+    """Retrieve eligible family members for selected grant scheme
+
+    Returns:
+        message (string): Success message
+        result (object): All the members who are eligible for the selected grant
+    """
     grantSchemesSelected = request.args.get('grant', default=None)
     if not grantSchemesSelected:
         return jsonify(
