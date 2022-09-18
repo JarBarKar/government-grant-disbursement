@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"household_type\": \"Landed\"\r\n}",
+					"raw": "{\r\n    \"household_type\": \"HDB\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -44,7 +44,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"household_id\": \"1\",\r\n    \"name\": \"John\",\r\n    \"gender\": \"Male\",\r\n    \"marital_status\": \"married\",\r\n    \"spouse\": \"Mary\",\r\n    \"occupation_type\": \"employed\",\r\n    \"annual_income\": \"1000\",\r\n    \"dob\": \"11/11/1999\"\r\n}",
+					"raw": "{\r\n    \"household_id\": \"12\",\r\n    \"name\": \"John\",\r\n    \"gender\": \"Male\",\r\n    \"marital_status\": \"married\",\r\n    \"spouse\": \"Mary\",\r\n    \"occupation_type\": \"employed\",\r\n    \"annual_income\": \"1000\",\r\n    \"dob\": \"11/11/1999\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -74,7 +74,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:5000/household/search",
+					"raw": "http://127.0.0.1:5000/household/all",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -85,7 +85,7 @@
 					"port": "5000",
 					"path": [
 						"household",
-						"search"
+						"all"
 					]
 				}
 			},
@@ -97,7 +97,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:5000/grant_schemes?grant=student-encouragement-bonus",
+					"raw": "http://127.0.0.1:5000/grant_schemes?grant=multigeneration-scheme",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -112,7 +112,7 @@
 					"query": [
 						{
 							"key": "grant",
-							"value": "student-encouragement-bonus"
+							"value": "multigeneration-scheme"
 						}
 					]
 				}

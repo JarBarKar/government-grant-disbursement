@@ -57,7 +57,7 @@ def create_household():
 
 
 ### Start of API point for all Households retrieval ###
-@household.route("/household/search", methods=['GET'])
+@household.route("/household/all", methods=['GET'])
 def get_all_households():
     """Get all households and respective family members
 
