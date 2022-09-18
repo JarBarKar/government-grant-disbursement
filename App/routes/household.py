@@ -42,7 +42,7 @@ def create_household():
         db.session.commit()
         return jsonify(
             {
-                "data": newHousehold,
+                "data": newHousehold.to_dict(),
                 "message": f"A {data['household_type']} house has been created in the system."
             }
         ), 200
@@ -57,7 +57,7 @@ def create_household():
 
 
 ### Start of API point for all Households retrieval ###
-@household.route("/household/search", methods=['GET'])
+@household.route("/household/all", methods=['GET'])
 def get_all_households():
     """Get all households and respective family members
 

@@ -81,7 +81,7 @@ flask --app App --debug run
 #### List all households
 
 ```bash
-  GET /household
+  GET /household/all
 ```
 
 #### Search for a specific household
